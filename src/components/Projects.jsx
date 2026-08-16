@@ -36,7 +36,7 @@ const projectsData = [
   {
     id: 4,
     num: '04',
-    video: '/videos/project-05.mp4',
+    video: '/videos/0188.mp4',
     category: 'Social Media',
     name: 'Social Cut',
     desc: 'Scroll-stopping edits for modern social media.',
@@ -57,7 +57,7 @@ const projectsData = [
   {
     id: 6,
     num: '06',
-    video: '/videos/project-06.mp4',
+    video: '/videos/0882.mp4',
     category: 'Short-Form',
     name: 'Quick Impact',
     desc: 'Maximum impact in minimum time — short-form at its best.',
