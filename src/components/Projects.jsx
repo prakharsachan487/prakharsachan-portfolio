@@ -78,7 +78,7 @@ const projectsData = [
   {
     id: 8,
     num: '08',
-    video: '/videos/project-08.mp4',
+    video: '/videos/0816.mp4',
     category: 'Content Edit',
     name: 'Creator Cut',
     desc: 'Content editing tailored for creators and brands.',
@@ -130,7 +130,7 @@ const projectsData = [
   {
     id: 13,
     num: '13',
-    video: '/videos/Video-69238.mp4',
+    video: '/videos/0816(1).mp4',
     category: 'Cinematic Edit',
     name: 'Frame Perfect',
     desc: 'Precision editing with cinematic grade and polish.',
