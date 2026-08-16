@@ -1,0 +1,61 @@
+/* ═══════════════════════════════════════════════════════
+   SECTION TRANSITION — Cinematic Cut Effects
+   ═══════════════════════════════════════════════════════ */
+
+.section-cut {
+  position: relative;
+  height: 4px;
+  background: var(--c-black);
+  overflow: hidden;
+}
+
+.section-cut__line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    var(--c-red-dark) 20%,
+    var(--c-red) 50%,
+    var(--c-red-dark) 80%,
+    transparent 100%
+  );
+  transform: translateY(-50%) scaleX(0);
+  transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.section-cut.visible .section-cut__line {
+  transform: translateY(-50%) scaleX(1);
+}
+
+/* Red flash transition between sections */
+.red-flash {
+  position: relative;
+  height: 2px;
+  background: var(--c-black);
+  overflow: hidden;
+}
+
+.red-flash::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--c-red);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: none;
+}
+
+.red-flash.visible::after {
+  animation: flash-line 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes flash-line {
+  0% { transform: scaleX(0); transform-origin: left; }
+  50% { transform: scaleX(1); transform-origin: left; }
+  50.01% { transform-origin: right; }
+  100% { transform: scaleX(0); transform-origin: right; }
+}

@@ -1,0 +1,173 @@
+/* ═══════════════════════════════════════════════════════
+   CONTACT — Huge Cinematic CTA
+   ═══════════════════════════════════════════════════════ */
+
+.contact {
+  position: relative;
+  padding: var(--s-3xl) var(--s-lg);
+  background: var(--c-black);
+  overflow: hidden;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact__bg {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  user-select: none;
+}
+
+.contact__bg-text {
+  font-family: var(--f-display);
+  font-size: clamp(8rem, 18vw, 16rem);
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(185, 28, 28, 0.08);
+  line-height: 0.9;
+  text-align: center;
+}
+
+.contact__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+}
+
+.contact__tag {
+  font-size: 0.55rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--c-red);
+  margin-bottom: 2rem;
+}
+
+.contact__headline {
+  font-family: var(--f-display);
+  font-size: clamp(3rem, 8vw, 7rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 1rem;
+}
+
+.contact__headline em {
+  font-family: var(--f-editorial);
+  font-style: italic;
+  color: var(--c-red);
+  display: block;
+  font-size: 0.85em;
+}
+
+.contact__sub {
+  font-size: 0.9rem;
+  color: var(--c-white-dim);
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--f-display);
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--c-white);
+  padding: 1.2rem 3rem;
+  border: 1px solid var(--c-red);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--t-base);
+}
+
+.contact__cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--c-red);
+  transform: translateX(-100%);
+  transition: transform var(--t-slow);
+  z-index: -1;
+}
+
+.contact__cta:hover::before {
+  transform: translateX(0);
+}
+
+.contact__cta-arrow {
+  font-size: 1.2rem;
+  transition: transform var(--t-base);
+}
+
+.contact__cta:hover .contact__cta-arrow {
+  transform: translateX(6px);
+}
+
+/* Links */
+.contact__links {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.contact__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color var(--t-base);
+}
+
+.contact__link:hover {
+  color: var(--c-red);
+}
+
+.contact__link-label {
+  font-size: 0.5rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--c-white-muted);
+}
+
+.contact__link-value {
+  font-family: var(--f-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Availability badge */
+.contact__available {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2.5rem;
+  font-size: 0.55rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--c-white-dim);
+  padding: 0.6rem 1.5rem;
+  border: 1px solid var(--c-dark-3);
+}
+
+.contact__available-dot {
+  width: 6px;
+  height: 6px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: pulse-green 2s ease infinite;
+}
