@@ -130,7 +130,7 @@ const projectsData = [
   {
     id: 13,
     num: '13',
-    video: '/videos/0816(1).mp4',
+    video: '/videos/0816-1.mp4',
     category: 'Cinematic Edit',
     name: 'Frame Perfect',
     desc: 'Precision editing with cinematic grade and polish.',

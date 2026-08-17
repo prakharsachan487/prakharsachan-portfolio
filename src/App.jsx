@@ -31,7 +31,7 @@ const allVideos = [
   { src: '/videos/Video-25529.mp4', title: 'Kinetic Pulse', category: 'Motion' },
   { src: '/videos/Video-20489.mp4', title: 'Micro Story', category: 'Content Edit' },
   { src: '/videos/Video-51870.mp4', title: 'Scroll Hook', category: 'Social Media' },
-  { src: '/videos/0816(1).mp4', title: 'Frame Perfect', category: 'Cinematic Edit' },
+  { src: '/videos/0816-1.mp4', title: 'Frame Perfect', category: 'Cinematic Edit' },
   { src: '/videos/Video-70140.mp4', title: 'Snap Edit', category: 'Short-Form' },
   { src: '/videos/Video-72634.mp4', title: 'Drift', category: 'Motion' },
   { src: '/videos/Video-81678.mp4', title: 'Raw Cut', category: 'Content Edit' },
