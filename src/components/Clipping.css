@@ -1,0 +1,212 @@
+/* ═══════════════════════════════════════════════════════
+   CLIPPING — Analysis / Breakdown Section
+   ═══════════════════════════════════════════════════════ */
+
+.clipping {
+  position: relative;
+  padding: var(--s-3xl) var(--s-lg);
+  background: var(--c-black);
+}
+
+.clipping__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.clipping__title {
+  font-family: var(--f-display);
+  font-size: clamp(3rem, 8vw, 6rem);
+  text-transform: uppercase;
+  line-height: 0.9;
+  color: var(--c-white);
+}
+
+.clipping__title em {
+  font-family: var(--f-editorial);
+  font-style: italic;
+  color: var(--c-red);
+  font-size: 0.6em;
+  display: block;
+  margin-top: 0.2em;
+}
+
+.clipping__label {
+  font-size: 0.55rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--c-white-muted);
+}
+
+/* Video container */
+.clipping__video-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: var(--c-dark);
+  overflow: hidden;
+  border: 1px solid var(--c-dark-3);
+}
+
+.clipping__video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  opacity: 0.7;
+  transition: opacity var(--t-slow), transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.clipping__video-wrap:hover .clipping__video {
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+/* Overlay */
+.clipping__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(5, 5, 5, 0.4) 0%,
+    transparent 40%,
+    transparent 60%,
+    rgba(5, 5, 5, 0.6) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Play button */
+.clipping__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  width: 100px;
+  height: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--t-base);
+  backdrop-filter: blur(4px);
+}
+
+.clipping__play::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 18px solid var(--c-white);
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+  margin-left: 4px;
+  transition: border-color var(--t-fast);
+}
+
+.clipping__video-wrap:hover .clipping__play {
+  border-color: var(--c-red);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.clipping__video-wrap:hover .clipping__play::after {
+  border-left-color: var(--c-red);
+}
+
+/* Bottom info */
+.clipping__info {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: 3;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all var(--t-base);
+}
+
+.clipping__video-wrap:hover .clipping__info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.clipping__info-title {
+  font-family: var(--f-display);
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.clipping__info-cat {
+  font-size: 0.55rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--c-red);
+  margin-top: 0.2rem;
+}
+
+/* Corner marks */
+.clipping__video-wrap .corner-mark {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  z-index: 3;
+}
+
+.clipping__video-wrap .corner-mark--tl {
+  top: 1rem;
+  left: 1rem;
+  border-top: 1px solid var(--c-red);
+  border-left: 1px solid var(--c-red);
+}
+
+.clipping__video-wrap .corner-mark--br {
+  bottom: 1rem;
+  right: 1rem;
+  border-bottom: 1px solid var(--c-red);
+  border-right: 1px solid var(--c-red);
+}
+
+/* Rec dot */
+.clipping__rec {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--c-red);
+}
+
+.clipping__rec-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--c-red);
+  border-radius: 50%;
+  animation: blink-rec 1.5s ease infinite;
+}
+
+@media (max-width: 768px) {
+  .clipping__play {
+    width: 70px;
+    height: 70px;
+  }
+
+  .clipping__play::after {
+    border-left-width: 14px;
+    border-top-width: 8px;
+    border-bottom-width: 8px;
+  }
+
+  .clipping__info {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -4,6 +4,7 @@ import CustomCursor from './components/CustomCursor';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Showreel from './components/Showreel';
+
 import Projects from './components/Projects';
 import VideoModal from './components/VideoModal';
 import About from './components/About';
@@ -35,6 +36,7 @@ const allVideos = [
   { src: '/videos/Video-70140.mp4', title: 'Snap Edit', category: 'Short-Form' },
   { src: '/videos/Video-72634.mp4', title: 'Drift', category: 'Motion' },
   { src: '/videos/Video-81678.mp4', title: 'Raw Cut', category: 'Content Edit' },
+  { src: '/videos/17aug_analysis.mp4', title: 'Aug Analysis', category: 'Clipping' },
 ];
 
 export default function App() {
@@ -87,6 +89,7 @@ export default function App() {
             <SectionCut />
             <Showreel onPlay={openVideo} />
             <RedFlash />
+
             <Projects onPlay={openVideo} />
             <SectionCut />
             <About />

@@ -179,6 +179,16 @@ const projectsData = [
     year: '2024',
     layout: 'wide',
   },
+  {
+    id: 18,
+    num: '18',
+    video: '/videos/17aug_analysis.mp4',
+    category: 'Clipping',
+    name: 'Clipping',
+    desc: 'In-depth analysis with precise clipping and sharp editorial cuts.',
+    year: '2024',
+    layout: 'landscape',
+  },
 ];
 
 export default function Projects({ onPlay }) {
